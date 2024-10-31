@@ -17,12 +17,12 @@ class ProjectSeeder extends Seeder
         Project::truncate();
 
         for ($i = 0; $i < 25; $i++) {
-            $project = fake()->sentence();
+            $title = fake()->sentence();
 
             Project::create([
-                'title' => $project,
-                'creation_date' => $project,
-                'author' => fake()->para
+                'title' => $title,
+                'creation_date' => fake()->date(),
+                'author' => fake()->name()
 
 
             ]);
